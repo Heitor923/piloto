@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Infoperfumes</title>
 
+  <meta name="description" content="Infoperfumes: catálogo com descrições detalhadas de perfumes — notas, perfumistas, sensações e recomendações." />
+  <!-- Favicon / logo da aba (salve a imagem em images/logo.png) -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+
   <script>
     tailwind = {
       config: {
@@ -27,11 +32,20 @@
 <body>
 
   <nav class="w-full bg-transparent backdrop-blur py-4 px-6 flex items-center justify-between" style="position:sticky;top:0;z-index:30;">
-    <h1 class="text-2xl font-semibold" id="site-title">Infoperfumes</h1>
+    <div class="nav-left" style="display:flex;align-items:center;gap:.75rem;">
+      <img src="images/logo.png" alt="Logo Infoperfumes" class="site-logo" />
+      <h1 class="text-2xl font-semibold" id="site-title">Infoperfumes</h1>
+    </div>
   </nav>
 
   <header class="text-center mt-8 mb-6">
-    <h2 class="text-3xl font-bold">Informações detalhadas sobre perfumes</h2>
+    <div style="display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;">
+      <img src="images/logo.png" alt="Infoperfumes logo" style="width:96px;height:auto;border-radius:6px;">
+      <div>
+        <h2 class="text-3xl font-bold">Informações detalhadas sobre perfumes</h2>
+        <p style="color:#cbd5e1;margin-top:.4rem;">Notas, perfumistas, sensação olfativa e recomendações — tudo em um só lugar.</p>
+      </div>
+    </div>
   </header>
 
   <main class="max-w-6xl mx-auto px-4 pb-8">
@@ -69,30 +83,100 @@
           <img src="https://lojadior.vtexassets.com/arquivos/ids/196928/3348900838178_01-shelf-dh-intense.jpg?v=638651143928070000" alt="Dior Homme Intense">
           <h4>Dior Homme Intense (2011)</h4>
           <p class="text-muted">Íris · Violeta · Madeira</p>
+
+          <div class="rating" data-product-id="dior-homme-intense" data-external-rating="4.3" data-external-count="234">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
 
         <article class="card" data-ocasiao="dia verao" data-name="Acqua di Giò" data-year="1996" data-perfumers="Alberto Morillas, Annick Menardo, Christian Dussoulier" data-sensation="Cítrico, limpo, fresco e “molhado”. Brisa do mar e roupa limpa." data-top="Bergamota, Limão, Laranja, Jasmim" data-heart="Notas marinhas, Jasmim, Coriandro, Pêssego" data-base="Almíscar, Cedro, Patchouli" data-img="https://fimgs.net/mdimg/perfume/o.71606.jpg">
           <img src="https://fimgs.net/mdimg/perfume/o.71606.jpg" alt="Acqua di Giò">
           <h4>Acqua di Giò (1996)</h4>
           <p class="text-muted">Cítricos · Água · Almíscar</p>
+
+          <div class="rating" data-product-id="acqua-di-gio" data-external-rating="4.2" data-external-count="182">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
 
         <article class="card" data-ocasiao="noite" data-name="Bleu de Chanel EDP" data-year="2014" data-perfumers="Jacques Polge" data-sensation="Aromático, amadeirado e elegante. Toranja fresca com toque de incenso." data-top="Toranja, Limão, Hortelã" data-heart="Gengibre, Noz-moscada, Jasmim" data-base="Incenso, Cedro, Sândalo, Vetiver" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShMMVj_HqpotSegCUOi9LuTF4L88_w-ZlYqQ&s">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShMMVj_HqpotSegCUOi9LuTF4L88_w-ZlYqQ&s" alt="Bleu de Chanel">
           <h4>Bleu de Chanel EDP (2014)</h4>
           <p class="text-muted">Toranja · Cedro · Incenso</p>
+
+          <div class="rating" data-product-id="bleu-de-chanel" data-external-rating="4.4" data-external-count="415">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
 
         <article class="card" data-ocasiao="festa noite" data-name="La Nuit de L'Homme" data-year="2009" data-perfumers="Anne Flipo, Pierre Wargnye, Dominique Ropion" data-sensation="Quente, especiado e sedutor. Cardamomo adocicado com lavanda suave e cedro." data-top="Cardamomo" data-heart="Lavanda, Bergamota" data-base="Cedro, Vetiver, Cumarina" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwkbg1-42sl4b2gXzuQgT5BOPPHG7ZTgOn7g&s">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwkbg1-42sl4b2gXzuQgT5BOPPHG7ZTgOn7g&s" alt="La Nuit de L'Homme">
           <h4>La Nuit de L'Homme (2009)</h4>
           <p class="text-muted">Cardamomo · Lavanda · Cedro</p>
+
+          <div class="rating" data-product-id="la-nuit-de-lhomme" data-external-rating="4.1" data-external-count="198">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
 
         <article class="card" data-ocasiao="dia festa" data-name="Invictus" data-year="2013" data-perfumers="Thomas Fontaine, Olivier Polge, Christophe Raynaud" data-sensation="Doce, fresco e esportivo. Tangerina com notas oceânicas e madeira ambarada." data-top="Toranja, Tangerina, Notas Marinhas" data-heart="Folha de Louro, Hediona" data-base="Guaiaco, Patchouli, Âmbar Cinzento" data-img="https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwbc6f2ceb/images/hi-res-BR/_3BFB9D5A-8F67-4E2E-B35F-8CEC17DAA893__Paco-Rabanne-Invictus_500px.jpg?sw=556&sh=680&sm=fit">
           <img src="https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwbc6f2ceb/images/hi-res-BR/_3BFB9D5A-8F67-4E2E-B35F-8CEC17DAA893__Paco-Rabanne-Invictus_500px.jpg?sw=556&sh=680&sm=fit" alt="Invictus">
           <h4>Invictus (2013)</h4>
           <p class="text-muted">Tangerina · Patchouli · Guaiaco</p>
+
+          <div class="rating" data-product-id="invictus" data-external-rating="4.0" data-external-count="156">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
       </div>
     </section>
@@ -105,30 +189,100 @@
           <img src="https://static.cestasmichelli.com.br/images/product/rs-2047-2515-0.jpg?ims=750x750" alt="La Vie Est Belle">
           <h4>La Vie Est Belle (2012)</h4>
           <p class="text-muted">Íris · Baunilha · Patchouli</p>
+
+          <div class="rating" data-product-id="la-vie-est-belle" data-external-rating="4.2" data-external-count="328">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
 
         <article class="card" data-ocasiao="dia verao" data-name="Light Blue" data-year="2001" data-perfumers="Olivier Cresp" data-sensation="Cítrico, leve e refrescante. Maçã verde crocante com limão e cedro." data-top="Limão Siciliano, Maçã, Campanula" data-heart="Jasmim, Rosa Branca, Bambu" data-base="Cedro, Almíscar, Âmbar" data-img="https://product-data.raiadrogasil.io/images/4037451.webp">
           <img src="https://product-data.raiadrogasil.io/images/4037451.webp" alt="Light Blue">
           <h4>Light Blue (2001)</h4>
           <p class="text-muted">Maçã · Limão · Cedro</p>
+
+          <div class="rating" data-product-id="light-blue" data-external-rating="4.0" data-external-count="210">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
 
         <article class="card" data-ocasiao="noite" data-name="Black Opium" data-year="2014" data-perfumers="Nicolas Beaulieu, Marie Salamagne, Honorine Blanc" data-sensation="Doce quente e viciante. Café cremoso com baunilha e flores. Sensual e marcante." data-top="Pêra, Pimenta Rosa" data-heart="Café, Jasmim, Flor de Laranjeira" data-base="Baunilha, Patchouli, Cedro" data-img="https://product-data.raiadrogasil.io/images/4702162.webp">
           <img src="https://product-data.raiadrogasil.io/images/4702162.webp" alt="Black Opium">
           <h4>Black Opium (2014)</h4>
           <p class="text-muted">Café · Baunilha · Flores</p>
+
+          <div class="rating" data-product-id="black-opium" data-external-rating="4.1" data-external-count="298">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
 
         <article class="card" data-ocasiao="festa noite" data-name="Flowerbomb" data-year="2005" data-perfumers="Olivier Polge, Carlos Benaim, Domitille Bertier" data-sensation="Explosão floral adocicada. Jasmim e rosa com patchouli para profundidade." data-top="Chá, Bergamota" data-heart="Jasmim, Rosa, Osmanthus, Frésia" data-base="Patchouli, Baunilha" data-img="https://fimgs.net/mdimg/perfume-thumbs/375x500.1460.jpg">
           <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.1460.jpg" alt="Flowerbomb">
           <h4>Flowerbomb (2005)</h4>
           <p class="text-muted">Jasmim · Rosa · Patchouli</p>
+
+          <div class="rating" data-product-id="flowerbomb" data-external-rating="4.3" data-external-count="256">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
 
         <article class="card" data-ocasiao="dia" data-name="Chanel Nº5" data-year="1921" data-perfumers="Ernest Beaux" data-sensation="Clássico, elegante e atalcado. Aldeídos que dão ar de luxo vintage." data-top="Aldeídos, Neroli, Limão" data-heart="Rosa, Jasmim, Íris, Lírio-do-vale" data-base="Vetiver, Sândalo, Baunilha, Âmbar" data-img="https://www.chanel.com/images//t_one/w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_620/n-5-l-eau-eau-de-toilette-spray-1-7fl-oz--packshot-default-105520-9564904030238.jpg">
           <img src="https://www.chanel.com/images//t_one/w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_620/n-5-l-eau-eau-de-toilette-spray-1-7fl-oz--packshot-default-105520-9564904030238.jpg" alt="Chanel Nº5">
           <h4>Chanel Nº5 (1921)</h4>
           <p class="text-muted">Aldeídos · Rosa · Jasmim</p>
+
+          <div class="rating" data-product-id="chanel-no5" data-external-rating="4.6" data-external-count="512">
+            <div class="rating-display" aria-hidden="true">
+              <div class="stars-outer" aria-hidden="true">
+                <span class="stars-text">★★★★★</span>
+                <div class="stars-inner" style="width:0%;">★★★★★</div>
+              </div>
+              <div class="rating-meta">
+                <span class="rating-average">—</span>
+                <small class="rating-count">(<span>0</span>)</small>
+              </div>
+            </div>
+          </div>
+
         </article>
       </div>
     </section>
@@ -138,7 +292,6 @@
   <footer class="w-full bg-neutral-950 text-gray-300 py-6">
     <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
       <p>&copy; <span id="year"></span> Infoperfumes</p>
-      
     </div>
   </footer>
 
@@ -150,6 +303,7 @@
   </div>
 
   <script src="app.js"></script>
+  <script src="ratings-view.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
