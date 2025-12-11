@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title> Infoperfumes</title>
+  <title>Infoperfumes</title>
 
   <script>
     tailwind = {
@@ -21,84 +21,137 @@
   </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-white text-gray-900">
+<body>
 
-  <nav class="w-full bg-white/80 backdrop-blur shadow-sm py-4 px-6 flex items-center justify-between">
-    <h1 class="text-2xl font-semibold">Infoperfumes</h1>
-    <button onclick="toggleInfo()" class="px-3 py-1 rounded-md border">Sobre</button>
+  <nav class="w-full bg-transparent backdrop-blur py-4 px-6 flex items-center justify-between" style="position:sticky;top:0;z-index:30;">
+    <h1 class="text-2xl font-semibold" id="site-title">Infoperfumes</h1>
   </nav>
 
   <header class="text-center mt-8 mb-6">
-    <h2 class="text-3xl font-bold">informações detalhadas sobre perfumes</h2>
-    <p class="text-sm text-gray-600 mt-2">Versão Piloto</p>
+    <h2 class="text-3xl font-bold">Informações detalhadas sobre perfumes</h2>
   </header>
 
-  <div id="infoBox" class="max-w-3xl mx-auto mb-6 hidden">
-    <div class="bg-gray-100 p-4 rounded-lg text-sm">Versão piloto com filtro por ocasião (Noite, Dia, Festa, Verão).</div>
-  </div>
+  <main class="max-w-6xl mx-auto px-4 pb-8">
 
-  <section class="max-w-6xl mx-auto px-4 mb-6">
-    <h3 class="font-medium mb-2">Filtrar por ocasião:</h3>
-    <div id="filtros" class="flex gap-2 flex-wrap">
-      <button type="button" class="filtro-btn px-3 py-1 rounded-lg bg-primario text-white" data-filter="all">Todos</button>
-      <button type="button" class="filtro-btn px-3 py-1 rounded-lg bg-gray-200" data-filter="noite">Noite</button>
-      <button type="button" class="filtro-btn px-3 py-1 rounded-lg bg-gray-200" data-filter="dia">Dia</button>
-      <button type="button" class="filtro-btn px-3 py-1 rounded-lg bg-gray-200" data-filter="festa">Festa</button>
-      <button type="button" class="filtro-btn px-3 py-1 rounded-lg bg-gray-200" data-filter="verao">Verão</button>
-    </div>
-  </section>
+    <!-- Filtros + Busca juntos -->
+    <section class="mb-6">
+      <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
+        <div>
+          <h3 class="font-medium mb-2 text-lg text-gray-200">Filtrar por ocasião:</h3>
+          <div id="filtros" class="flex gap-2 flex-wrap">
+            <button type="button" class="filtro-btn" data-filter="all" aria-pressed="false">Todos</button>
+            <button type="button" class="filtro-btn" data-filter="noite" aria-pressed="false">Noite</button>
+            <button type="button" class="filtro-btn" data-filter="dia" aria-pressed="false">Dia</button>
+            <button type="button" class="filtro-btn" data-filter="festa" aria-pressed="false">Festa</button>
+            <button type="button" class="filtro-btn" data-filter="verao" aria-pressed="false">Verão</button>
+          </div>
+        </div>
 
-  <main id="grid" class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pb-12">
+        <div class="w-full lg:w-1/3">
+          <label for="top-search" class="sr-only">Buscar perfumes</label>
+          <div style="display:flex;gap:.5rem;">
+            <input id="top-search" type="text" placeholder="Buscar perfumes, notas, marca..." class="search-input" aria-label="Buscar perfumes">
+            <button id="search-btn-top" class="btn-action">Buscar</button>
+            <button id="clear-search" class="btn-outline">Limpar</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <article class="card bg-white rounded-xl shadow p-4" data-ocasiao="noite festa">
-      
-      <img src="https://images.tcdn.com.br/img/img_prod/1222831/perfume_dior_homme_intense_eau_de_parfum_109_3_c18d8f9c9db44faa0c02d5dddd6268aa.jpg" alt="Dior Homme Intense" class="w-full h-48 object-cover rounded-md">
-      <h4 class="mt-3 font-semibold">Dior Homme Intense</h4>
-      <p class="text-sm text-gray-600">Notas: Íris, Lavanda, Ambreta, Cacau</p>
-      <p class="text-xs mt-2 text-gray-500"><strong>Ocasiões:</strong> Noite, Festa</p>
-      <p class="text-xs text-gray-500"><strong>Perfumista:</strong> François Demachy</p>
-    </article>
+    <!-- Seção Masculino -->
+    <section id="masculino" class="mb-8">
+      <h3 class="text-2xl font-semibold mb-4">Masculino</h3>
+      <div id="grid-m" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="card" data-ocasiao="noite festa" data-name="Dior Homme Intense" data-year="2011" data-perfumers="François Demachy" data-sensation="Elegante, cremoso e sofisticado. Íris amanteigada misturada com madeira seca. Sedutor para noite." data-top="Lavanda" data-heart="Íris, Ambreta" data-base="Cedro, Vetiver" data-img="https://lojadior.vtexassets.com/arquivos/ids/196928/3348900838178_01-shelf-dh-intense.jpg?v=638651143928070000">
+          <img src="https://lojadior.vtexassets.com/arquivos/ids/196928/3348900838178_01-shelf-dh-intense.jpg?v=638651143928070000" alt="Dior Homme Intense">
+          <h4>Dior Homme Intense (2011)</h4>
+          <p class="text-muted">Íris · Violeta · Madeira</p>
+        </article>
 
-    <article class="card bg-white rounded-xl shadow p-4" data-ocasiao="dia verao">
-      
-      <img src="https://m.media-amazon.com/images/I/61e7ukb9WrL._AC_SX679_.jpg" alt="Acqua di Gio Profumo" class="w-full h-48 object-cover rounded-md">
-      <h4 class="mt-3 font-semibold">Acqua di Gio Profumo</h4>
-      <p class="text-sm text-gray-600">Notas: Bergamota, Incenso, Patchouli, Alecrim</p>
-      <p class="text-xs mt-2 text-gray-500"><strong>Ocasiões:</strong> Dia, Verão</p>
-      <p class="text-xs text-gray-500"><strong>Perfumista:</strong> Alberto Morillas</p>
-    </article>
+        <article class="card" data-ocasiao="dia verao" data-name="Acqua di Giò" data-year="1996" data-perfumers="Alberto Morillas, Annick Menardo, Christian Dussoulier" data-sensation="Cítrico, limpo, fresco e “molhado”. Brisa do mar e roupa limpa." data-top="Bergamota, Limão, Laranja, Jasmim" data-heart="Notas marinhas, Jasmim, Coriandro, Pêssego" data-base="Almíscar, Cedro, Patchouli" data-img="https://fimgs.net/mdimg/perfume/o.71606.jpg">
+          <img src="https://fimgs.net/mdimg/perfume/o.71606.jpg" alt="Acqua di Giò">
+          <h4>Acqua di Giò (1996)</h4>
+          <p class="text-muted">Cítricos · Água · Almíscar</p>
+        </article>
 
-    <article class="card bg-white rounded-xl shadow p-4" data-ocasiao="festa noite">
-      
-      <img src="data:image/webp;base64,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" alt="Yves Saint Laurent La Nuit de l’Homme" class="w-full h-48 object-cover rounded-md">
-      <h4 class="mt-3 font-semibold">Yves Saint Laurent La Nuit de l’Homme</h4>
-      <p class="text-sm text-gray-600">Notas: Cardamomo, Bergamota, Cedro, Lavanda</p>
-      <p class="text-xs mt-2 text-gray-500"><strong>Ocasiões:</strong> Noite, Festa</p>
-      <p class="text-xs text-gray-500"><strong>Perfumista:</strong> Anne Flipo</p>
-    </article>
+        <article class="card" data-ocasiao="noite" data-name="Bleu de Chanel EDP" data-year="2014" data-perfumers="Jacques Polge" data-sensation="Aromático, amadeirado e elegante. Toranja fresca com toque de incenso." data-top="Toranja, Limão, Hortelã" data-heart="Gengibre, Noz-moscada, Jasmim" data-base="Incenso, Cedro, Sândalo, Vetiver" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShMMVj_HqpotSegCUOi9LuTF4L88_w-ZlYqQ&s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShMMVj_HqpotSegCUOi9LuTF4L88_w-ZlYqQ&s" alt="Bleu de Chanel">
+          <h4>Bleu de Chanel EDP (2014)</h4>
+          <p class="text-muted">Toranja · Cedro · Incenso</p>
+        </article>
 
-    <article class="card bg-white rounded-xl shadow p-4" data-ocasiao="dia verao">
-     
-      <img src="data:image/webp;base64,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" alt="Bleu de Chanel" class="w-full h-48 object-cover rounded-md">
-      <h4 class="mt-3 font-semibold">Bleu de Chanel</h4>
-      <p class="text-sm text-gray-600">Notas: Limão, Toranja, Cedro, Incenso</p>
-      <p class="text-xs mt-2 text-gray-500"><strong>Ocasiões:</strong> Dia, Verão</p>
-      <p class="text-xs text-gray-500"><strong>Perfumista:</strong> Jacques Polge</p>
-    </article>
+        <article class="card" data-ocasiao="festa noite" data-name="La Nuit de L'Homme" data-year="2009" data-perfumers="Anne Flipo, Pierre Wargnye, Dominique Ropion" data-sensation="Quente, especiado e sedutor. Cardamomo adocicado com lavanda suave e cedro." data-top="Cardamomo" data-heart="Lavanda, Bergamota" data-base="Cedro, Vetiver, Cumarina" data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwkbg1-42sl4b2gXzuQgT5BOPPHG7ZTgOn7g&s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwkbg1-42sl4b2gXzuQgT5BOPPHG7ZTgOn7g&s" alt="La Nuit de L'Homme">
+          <h4>La Nuit de L'Homme (2009)</h4>
+          <p class="text-muted">Cardamomo · Lavanda · Cedro</p>
+        </article>
 
-    <article class="card bg-white rounded-xl shadow p-4" data-ocasiao="festa noite">
-   
-      <img src="https://th.bing.com/th/id/OIP.x68aq39VXRv96ZL2mQId_QHaHa?w=176&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="1 Million" class="w-full h-48 object-cover rounded-md">
-      <h4 class="mt-3 font-semibold">1 Million</h4>
-      <p class="text-sm text-gray-600">Notas: Toranja, Canela, Rosa, Madeira</p>
-      <p class="text-xs mt-2 text-gray-500"><strong>Ocasiões:</strong> Festa, Noite</p>
-      <p class="text-xs text-gray-500"><strong>Perfumista:</strong> Christophe Raynaud</p>
-    </article>
+        <article class="card" data-ocasiao="dia festa" data-name="Invictus" data-year="2013" data-perfumers="Thomas Fontaine, Olivier Polge, Christophe Raynaud" data-sensation="Doce, fresco e esportivo. Tangerina com notas oceânicas e madeira ambarada." data-top="Toranja, Tangerina, Notas Marinhas" data-heart="Folha de Louro, Hediona" data-base="Guaiaco, Patchouli, Âmbar Cinzento" data-img="https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwbc6f2ceb/images/hi-res-BR/_3BFB9D5A-8F67-4E2E-B35F-8CEC17DAA893__Paco-Rabanne-Invictus_500px.jpg?sw=556&sh=680&sm=fit">
+          <img src="https://www.sephora.com.br/dw/image/v2/BFJC_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/pt_BR/dwbc6f2ceb/images/hi-res-BR/_3BFB9D5A-8F67-4E2E-B35F-8CEC17DAA893__Paco-Rabanne-Invictus_500px.jpg?sw=556&sh=680&sm=fit" alt="Invictus">
+          <h4>Invictus (2013)</h4>
+          <p class="text-muted">Tangerina · Patchouli · Guaiaco</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção Feminino -->
+    <section id="feminino" class="mb-8">
+      <h3 class="text-2xl font-semibold mb-4">Feminino</h3>
+      <div id="grid-f" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="card" data-ocasiao="noite festa" data-name="La Vie Est Belle" data-year="2012" data-perfumers="Olivier Polge, Dominique Ropion, Anne Flipo" data-sensation="Doce, cremoso e elegante. Íris dá ar chique, baunilha e pralinê gourmand." data-top="Pêra, Cassis" data-heart="Íris, Jasmim, Flor de Laranjeira" data-base="Patchouli, Baunilha, Pralinê" data-img="https://static.cestasmichelli.com.br/images/product/rs-2047-2515-0.jpg?ims=750x750">
+          <img src="https://static.cestasmichelli.com.br/images/product/rs-2047-2515-0.jpg?ims=750x750" alt="La Vie Est Belle">
+          <h4>La Vie Est Belle (2012)</h4>
+          <p class="text-muted">Íris · Baunilha · Patchouli</p>
+        </article>
+
+        <article class="card" data-ocasiao="dia verao" data-name="Light Blue" data-year="2001" data-perfumers="Olivier Cresp" data-sensation="Cítrico, leve e refrescante. Maçã verde crocante com limão e cedro." data-top="Limão Siciliano, Maçã, Campanula" data-heart="Jasmim, Rosa Branca, Bambu" data-base="Cedro, Almíscar, Âmbar" data-img="https://product-data.raiadrogasil.io/images/4037451.webp">
+          <img src="https://product-data.raiadrogasil.io/images/4037451.webp" alt="Light Blue">
+          <h4>Light Blue (2001)</h4>
+          <p class="text-muted">Maçã · Limão · Cedro</p>
+        </article>
+
+        <article class="card" data-ocasiao="noite" data-name="Black Opium" data-year="2014" data-perfumers="Nicolas Beaulieu, Marie Salamagne, Honorine Blanc" data-sensation="Doce quente e viciante. Café cremoso com baunilha e flores. Sensual e marcante." data-top="Pêra, Pimenta Rosa" data-heart="Café, Jasmim, Flor de Laranjeira" data-base="Baunilha, Patchouli, Cedro" data-img="https://product-data.raiadrogasil.io/images/4702162.webp">
+          <img src="https://product-data.raiadrogasil.io/images/4702162.webp" alt="Black Opium">
+          <h4>Black Opium (2014)</h4>
+          <p class="text-muted">Café · Baunilha · Flores</p>
+        </article>
+
+        <article class="card" data-ocasiao="festa noite" data-name="Flowerbomb" data-year="2005" data-perfumers="Olivier Polge, Carlos Benaim, Domitille Bertier" data-sensation="Explosão floral adocicada. Jasmim e rosa com patchouli para profundidade." data-top="Chá, Bergamota" data-heart="Jasmim, Rosa, Osmanthus, Frésia" data-base="Patchouli, Baunilha" data-img="https://fimgs.net/mdimg/perfume-thumbs/375x500.1460.jpg">
+          <img src="https://fimgs.net/mdimg/perfume-thumbs/375x500.1460.jpg" alt="Flowerbomb">
+          <h4>Flowerbomb (2005)</h4>
+          <p class="text-muted">Jasmim · Rosa · Patchouli</p>
+        </article>
+
+        <article class="card" data-ocasiao="dia" data-name="Chanel Nº5" data-year="1921" data-perfumers="Ernest Beaux" data-sensation="Clássico, elegante e atalcado. Aldeídos que dão ar de luxo vintage." data-top="Aldeídos, Neroli, Limão" data-heart="Rosa, Jasmim, Íris, Lírio-do-vale" data-base="Vetiver, Sândalo, Baunilha, Âmbar" data-img="https://www.chanel.com/images//t_one/w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_620/n-5-l-eau-eau-de-toilette-spray-1-7fl-oz--packshot-default-105520-9564904030238.jpg">
+          <img src="https://www.chanel.com/images//t_one/w_0.51,h_0.51,c_crop/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_620/n-5-l-eau-eau-de-toilette-spray-1-7fl-oz--packshot-default-105520-9564904030238.jpg" alt="Chanel Nº5">
+          <h4>Chanel Nº5 (1921)</h4>
+          <p class="text-muted">Aldeídos · Rosa · Jasmim</p>
+        </article>
+      </div>
+    </section>
 
   </main>
 
-  <script src="app.js" defer></script>
+  <footer class="w-full bg-neutral-950 text-gray-300 py-6">
+    <div class="max-w-6xl mx-auto px-4 flex items-center justify-between">
+      <p>&copy; <span id="year"></span> Infoperfumes</p>
+      
+    </div>
+  </footer>
+
+  <div id="perfume-modal" class="modal fixed inset-0 hidden items-center justify-center bg-black/60 z-50" aria-hidden="true">
+    <div class="modal-content rounded-xl max-w-3xl w-full overflow-hidden">
+      <button class="modal-close p-3 text-2xl" aria-label="Fechar">×</button>
+      <div id="modal-body" class="p-6"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
