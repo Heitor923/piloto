@@ -132,19 +132,3 @@ footer { background: linear-gradient(180deg, var(--bg-dark), rgba(8,8,8,0.95)); 
   .modal-content { width: 94%; }
   #modal-body { padding: 1rem; }
 }
-
-/* ===========================
-   Rating styles (visual only)
-   =========================== */
-.rating { margin-top: .75rem; color: #cbd5e1; font-family: inherit; padding: 0 .75rem .75rem .75rem; }
-.rating-display { display:flex; align-items:center; gap:.75rem; }
-.stars-outer { position:relative; display:inline-block; font-size:1.05rem; line-height:1; color:#64748b; }
-.stars-outer .stars-text { visibility:hidden; } /* serve de base para a largura */
-.stars-inner { position:absolute; top:0; left:0; white-space:nowrap; overflow:hidden; color:#ffb020; } /* preenchimento */
-.stars-inner::before { content: ''; } /* placeholder */
-
-.rating-meta { font-size:.9rem; color:#cbd5e1; }
-
-@media (max-width:640px) {
-  .stars-outer { font-size:1rem; }
-}
