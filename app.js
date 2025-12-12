@@ -116,7 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeModal() {
     modal.classList.add('hidden');
-    modal.setAttribute('aria-hidden', 'true');
     modalBody.innerHTML = '';
   }
 
