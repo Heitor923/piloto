@@ -20,11 +20,11 @@
   --brand-5-hex: #0D0D0D;  /* Preto Profundo - Background principal */
 
   /* Versões RGBA para transparências */
-  --brand-1-rgba: rgba(53, 55, 89, 1);
+  --brand-1-rgba: rgba(54, 55, 89, 1);
   --brand-2-rgba: rgba(88, 88, 89, 1);
   --brand-3-rgba: rgba(38, 37, 35, 1);
-  --brand-4-rgba: rgba(165, 165, 165, 1);
-  --brand-5-rgba: rgba(12, 12, 12, 1);
+  --brand-4-rgba: rgba(166, 166, 166, 1);
+  --brand-5-rgba: rgba(13, 13, 13, 1);
 
   /* Cores Funcionais Semânticas */
   --bg-dark: var(--brand-5-hex);      /* Background escuro principal */

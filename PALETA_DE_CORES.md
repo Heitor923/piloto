@@ -8,7 +8,7 @@ Este documento apresenta a paleta de cores escolhida para o website Infoperfumes
 
 ### Cores Principais (Brand Colors)
 
-1. **Brand 1 - Azul Ardósia Escuro** (`#363759` / `rgb(53, 55, 89)`)
+1. **Brand 1 - Azul Ardósia Escuro** (`#363759` / `rgb(54, 55, 89)`)
    - Uso: Painéis principais, navegação, backgrounds secundários
    - Representação: Sofisticação e profundidade
 
@@ -20,11 +20,11 @@ Este documento apresenta a paleta de cores escolhida para o website Infoperfumes
    - Uso: Textos de destaque, elementos de alta hierarquia
    - Representação: Elegância e luxo
 
-4. **Brand 4 - Cinza Claro** (`#A6A6A6` / `rgb(165, 165, 165)`)
+4. **Brand 4 - Cinza Claro** (`#A6A6A6` / `rgb(166, 166, 166)`)
    - Uso: Textos secundários (muted), informações auxiliares
    - Representação: Sutileza e informação complementar
 
-5. **Brand 5 - Preto Profundo** (`#0D0D0D` / `rgb(12, 12, 12)`)
+5. **Brand 5 - Preto Profundo** (`#0D0D0D` / `rgb(13, 13, 13)`)
    - Uso: Background principal, fundos escuros
    - Representação: Sofisticação máxima e foco no conteúdo
 
