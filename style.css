@@ -1,33 +1,51 @@
-:root{
-  --brand-1-hex: #363759;
-  --brand-2-hex: #585859;
-  --brand-3-hex: #262523;
-  --brand-4-hex: #A6A6A6;
-  --brand-5-hex: #0D0D0D;
+/* ========================================
+   PALETA DE CORES - INFOPERFUMES
+   ========================================
+   
+   Psicologia das Cores:
+   - Tons escuros: Sofisticação, luxo, mistério (alinhado com perfumes premium)
+   - Laranja vibrante: Energia, ação, convite à interação
+   - Cinzas graduados: Hierarquia, neutralidade, profissionalismo
+   - Brancos suaves: Legibilidade, clareza, elegância
+   
+   Veja PALETA_DE_CORES.md para documentação completa
+   ======================================== */
 
+:root{
+  /* Cores da Marca (Brand Colors) */
+  --brand-1-hex: #363759;  /* Azul Ardósia Escuro - Painéis e navegação */
+  --brand-2-hex: #585859;  /* Cinza Médio - Elementos intermediários */
+  --brand-3-hex: #262523;  /* Preto Carvão - Textos de destaque */
+  --brand-4-hex: #A6A6A6;  /* Cinza Claro - Textos secundários (muted) */
+  --brand-5-hex: #0D0D0D;  /* Preto Profundo - Background principal */
+
+  /* Versões RGBA para transparências */
   --brand-1-rgba: rgba(53, 55, 89, 1);
   --brand-2-rgba: rgba(88, 88, 89, 1);
   --brand-3-rgba: rgba(38, 37, 35, 1);
   --brand-4-rgba: rgba(165, 165, 165, 1);
   --brand-5-rgba: rgba(12, 12, 12, 1);
 
-  --bg-dark: var(--brand-5-hex);
-  --panel-dark: var(--brand-1-hex);
-  --muted: var(--brand-4-hex);
-  --accent: #ff6b00;
-  --text-light: #f3f4f6;
+  /* Cores Funcionais Semânticas */
+  --bg-dark: var(--brand-5-hex);      /* Background escuro principal */
+  --panel-dark: var(--brand-1-hex);   /* Painéis e componentes */
+  --muted: var(--brand-4-hex);        /* Textos secundários */
+  --accent: #ff6b00;                  /* Laranja - Call-to-Actions e interações */
+  --text-light: #f3f4f6;              /* Branco suave - Textos principais */
 }
 
 /* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Body - Background com gradiente escuro para criar profundidade e sofisticação */
 body {
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  color: #e6e7ea;
-  background: linear-gradient(180deg, #0f172a 0%, rgba(7,9,17,0.65) 100%);
+  color: #e6e7ea;  /* Cinza muito claro para texto principal */
+  background: linear-gradient(180deg, #0f172a 0%, rgba(7,9,17,0.65) 100%);  /* Gradiente de azul escuro a preto */
   min-height: 100vh;
 }
 
-/* Nav */
+/* Nav - Gradiente sutil para criar sensação de profundidade */
 nav {
   background: linear-gradient(90deg, var(--brand-1-rgba), rgba(40,40,60,0.9));
   color: var(--text-light);
@@ -39,7 +57,7 @@ nav {
 /* Headings */
 h2, h3 { color: #f3f4f6; }
 
-/* Cards */
+/* Cards - Estilo minimalista com bordas sutis para destacar as imagens dos produtos */
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
   border: 1px solid rgba(255,255,255,0.03);
@@ -49,10 +67,26 @@ h2, h3 { color: #f3f4f6; }
   cursor: pointer;
   padding: 0;
 }
-.card:hover { transform: translateY(-6px); box-shadow: 0 10px 40px rgba(2,6,23,0.6); }
-.card img { width: 100%; height: 220px; object-fit: cover; display: block; }
-.card h4 { color: #f8fafc; margin: .75rem; font-size: 1.05rem; }
-.card p.text-muted { color: var(--muted); margin: 0 .75rem .75rem  .75rem; font-size: .9rem; }
+.card:hover { 
+  transform: translateY(-6px); 
+  box-shadow: 0 10px 40px rgba(2,6,23,0.6); 
+}
+.card img { 
+  width: 100%; 
+  height: 220px; 
+  object-fit: cover; 
+  display: block; 
+}
+.card h4 { 
+  color: #f8fafc;  /* Branco quase puro para títulos de produtos */
+  margin: .75rem; 
+  font-size: 1.05rem; 
+}
+.card p.text-muted { 
+  color: var(--muted);  /* Cinza claro para informações secundárias */
+  margin: 0 .75rem .75rem  .75rem; 
+  font-size: .9rem; 
+}
 
 /* Hidden */
 .hidden { display: none !important; }
@@ -70,7 +104,7 @@ h2, h3 { color: #f3f4f6; }
 }
 .modal-close { background: transparent; border: none; color: var(--text-light); position: absolute; right: 1rem; top: 1rem; font-size: 1.6rem; cursor: pointer; }
 
-/* Buttons (filtros) */
+/* Buttons (filtros) - Estados claros para navegação intuitiva */
 .filtro-btn {
   padding: .4rem .75rem;
   border-radius: .5rem;
@@ -80,27 +114,30 @@ h2, h3 { color: #f3f4f6; }
   cursor: pointer;
   transition: background .14s ease, color .14s ease, transform .12s ease;
 }
-.filtro-btn:hover { background: rgba(255,255,255,0.06); transform: translateY(-2px); }
+.filtro-btn:hover { 
+  background: rgba(255,255,255,0.06); 
+  transform: translateY(-2px); 
+}
 .filtro-btn.active-filter, .filtro-btn[aria-pressed="true"] {
-  background: var(--panel-dark) !important;
+  background: var(--panel-dark) !important;  /* Azul ardósia para filtro ativo */
   color: var(--text-light) !important;
   border-color: rgba(255,255,255,0.06);
 }
 
-/* Search input and buttons */
+/* Search input and buttons - Contraste máximo para usabilidade */
 .search-input {
   width: 100%;
   padding: .6rem .75rem;
   border-radius: .5rem;
   border: 1px solid rgba(255,255,255,0.09);
-  background: #ffffff;
-  color: #0b1220;
+  background: #ffffff;  /* Branco puro para contraste no input */
+  color: #0b1220;  /* Texto escuro para legibilidade no fundo branco */
   outline: none;
 }
 .search-input::placeholder { color: #6b7280; }
 
 .btn-action {
-  background: var(--accent);
+  background: var(--accent);  /* Laranja vibrante para Call-to-Action */
   color: #fff;
   border: none;
   padding: .6rem .85rem;
