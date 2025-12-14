@@ -14,6 +14,8 @@ O website Infoperfumes utiliza uma paleta de cores cuidadosamente selecionada pa
 | Cinza Claro | `#A6A6A6` | rgb(166, 166, 166) | Texto secundário (muted) |
 | Preto Profundo | `#0D0D0D` | rgb(13, 13, 13) | Fundo principal |
 
+**Nota:** O arquivo CSS também define variantes RGBA ligeiramente diferentes (por exemplo, `rgba(53, 55, 89, 1)` para `#363759`), mas os valores hexadecimais são os que definem as cores oficiais da paleta.
+
 ### Cores de Apoio
 
 | Cor | Código Hexadecimal | RGB | Uso Principal |
