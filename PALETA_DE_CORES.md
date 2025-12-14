@@ -51,7 +51,7 @@ Este documento apresenta a paleta de cores escolhida para o website Infoperfumes
 - **Background Principal**: `linear-gradient(180deg, #0f172a 0%, rgba(7,9,17,0.65) 100%)`
   - Criação de profundidade e atmosfera sofisticada
 
-- **Navegação**: `linear-gradient(90deg, rgba(53, 55, 89, 1), rgba(40,40,60,0.9))`
+- **Navegação**: `linear-gradient(90deg, rgba(54, 55, 89, 1), rgba(40,40,60,0.9))`
   - Efeito sutil de transição para elementos de interface
 
 - **Cards**: `linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12))`
